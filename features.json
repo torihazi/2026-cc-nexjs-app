@@ -1,0 +1,50 @@
+{
+  "project": "harness-starter",
+  "description": "機能リスト・受け入れ基準・sprint。これが唯一の信頼できる進捗ソース (single source of truth)。",
+  "rules": [
+    "status は failing | passing のみ。新規は必ず failing。",
+    "受け入れ基準 (acceptance) を削除・緩和してはならない。",
+    "status を passing にできるのは evaluator の判定時のみ。",
+    "sprints[] は関連機能を束ねた計画上のグルーピング。sprint.status は planned | in_progress | done (進捗可視化用の帳簿。全機能 passing で done)。",
+    "plan (全機能 + sprint 分割) は人間が1回承認し、以後は各機能の go/no-go (PR後) を取る。",
+    "commit も PR も機能ごとに出す。sprint 末にまとめない。"
+  ],
+  "sprints": [
+    {
+      "id": "S-1",
+      "title": "サンプル sprint: 最小の動くアプリ",
+      "goal": "ヘルスチェックとトップページに関する機能を束ねたグルーピング (各機能ごとに PR/go-no-go)。",
+      "status": "planned"
+    }
+  ],
+  "features": [
+    {
+      "id": "F-001",
+      "sprint": "S-1",
+      "title": "サンプル機能: ヘルスチェックエンドポイント",
+      "priority": 1,
+      "status": "failing",
+      "depends_on": [],
+      "acceptance": [
+        "GET /health が 200 と {\"status\":\"ok\"} を返す",
+        "サーバ未起動時に init.sh で起動でき、起動後に上記が成立する",
+        "対応する自動テストが存在し、check.sh で実行される"
+      ],
+      "notes": "これはテンプレートのサンプル。planner が本物の機能に置き換える。"
+    },
+    {
+      "id": "F-002",
+      "sprint": "S-1",
+      "title": "サンプルUI機能: トップページ",
+      "priority": 2,
+      "status": "failing",
+      "depends_on": ["F-001"],
+      "acceptance": [
+        "トップページが表示され、主要導線が1画面に収まる",
+        "色・タイポ・余白・コンポーネントが DESIGN.md のトークンに準拠している (値の直書きが無い)",
+        "DESIGN.md validate が通る"
+      ],
+      "notes": "UIアプリでの視覚受け入れ基準の例。DESIGN.md 準拠を evaluator が描画して確認する。UIが無いアプリでは削除してよい。"
+    }
+  ]
+}
