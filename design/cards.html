@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>カード｜つみlog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html,body{margin:0}
+body{background:#FBF8F0;color:#1B3B2A;font-family:'Zen Kaku Gothic New',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#15803D;text-decoration:none}a:hover{color:#0f5c2c}
+.spine:hover{transform:translateY(-6px)}
+.card:hover{box-shadow:0 10px 26px rgba(20,83,45,.13);transform:translateY(-3px)}
+.row:hover{background:#FBFAF5}
+.del:hover{background:#FEEEE8;color:#E8674C;border-color:#F6C9BB}
+.btnprimary:hover{filter:brightness(.96)}
+input:focus{outline:none;border-color:#22A366}
+
+</style></head><body><div style="background:#fff;border-bottom:1px solid #EDE9DD;position:sticky;top:0;z-index:20">
+  <div style="max-width:1180px;margin:0 auto;padding:15px 32px;display:flex;align-items:center;justify-content:space-between">
+    <a href="shelf.html" style="text-decoration:none"><div style="display:flex;align-items:center;gap:11px">
+  <div style="width:34px;height:34px;border-radius:10px;background:#14532D;display:flex;align-items:center;justify-content:center">
+    <div style="width:14px;height:18px;background:#FCD34D;border-radius:2px;transform:rotate(-8deg)"></div>
+  </div>
+  <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;color:#14532D">つみlog</span>
+</div></a>
+    <a href="index.html" class="btnprimary" style="border:2px solid #E7E3D8;background:#fff;color:#5B6A60;font-weight:700;font-size:13px;padding:9px 18px;border-radius:10px">ログアウト</a>
+  </div>
+</div><div style="max-width:1180px;margin:0 auto;padding:34px 32px 80px">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:30px">
+    <div style="background:#14532D;border-radius:18px;padding:22px 24px;color:#fff">
+    <div style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#A7D3B8;margin-bottom:6px">積読ぜんぶ</div>
+    <div style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:34px;line-height:1;color:#fff">9<span style="font-size:15px;font-weight:700;margin-left:4px;color:#A7D3B8">冊</span></div>
+  </div>
+    <div style="background:#fff;border:1px solid #EFEBDF;border-radius:18px;padding:22px 24px;">
+    <div style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#C2410C;margin-bottom:6px"><span style="width:8px;height:8px;border-radius:50%;background:#FB7A4B"></span>未読</div>
+    <div style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:34px;line-height:1;color:#14532D">5<span style="font-size:15px;font-weight:700;margin-left:4px;color:#9AA69D">冊</span></div>
+  </div>
+    <div style="background:#fff;border:1px solid #EFEBDF;border-radius:18px;padding:22px 24px;">
+    <div style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#B45309;margin-bottom:6px"><span style="width:8px;height:8px;border-radius:50%;background:#F5A623"></span>読書中</div>
+    <div style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:34px;line-height:1;color:#14532D">2<span style="font-size:15px;font-weight:700;margin-left:4px;color:#9AA69D">冊</span></div>
+  </div>
+    <div style="background:#fff;border:1px solid #EFEBDF;border-radius:18px;padding:22px 24px;">
+    <div style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#15803D;margin-bottom:6px"><span style="width:8px;height:8px;border-radius:50%;background:#22A366"></span>読了</div>
+    <div style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:34px;line-height:1;color:#14532D">2<span style="font-size:15px;font-weight:700;margin-left:4px;color:#9AA69D">冊</span></div>
+  </div>
+  </div><div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:16px">
+    <div>
+      <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:28px;color:#14532D;margin:0">わたしの積読</h1>
+      <p style="color:#7C8A80;font-size:13px;margin:6px 0 0">表示を切り替えて眺めよう。× で削除、＋ で登録できます。</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="display:flex;background:#EFEBDF;padding:4px;border-radius:11px">
+        <a href="shelf.html" style="padding:8px 16px;border-radius:9px;background:transparent;color:#7C8A80;font-weight:700;font-size:13px;box-shadow:none">本棚</a><a href="cards.html" style="padding:8px 16px;border-radius:9px;background:#fff;color:#14532D;font-weight:700;font-size:13px;box-shadow:0 1px 4px rgba(20,83,45,.12)">カード</a><a href="list.html" style="padding:8px 16px;border-radius:9px;background:transparent;color:#7C8A80;font-weight:700;font-size:13px;box-shadow:none">リスト</a>
+      </div>
+      <a href="add.html" class="btnprimary" style="background:#FF7A59;color:#fff;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;padding:12px 20px;border-radius:12px;box-shadow:0 6px 16px rgba(255,122,89,.28);display:flex;align-items:center;gap:8px"><span style="font-size:17px;line-height:1">＋</span>本を登録</a>
+    </div>
+  </div><div style="display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap">
+    <span style="display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:999px;border:2px solid #14532D;background:#14532D;color:#fff;font-weight:700;font-size:13px">すべて<span style="font-weight:700;font-size:11px;padding:1px 7px;border-radius:999px;background:rgba(255,255,255,.22);color:#fff">9</span></span><span style="display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:999px;border:2px solid #E3E0D6;background:#fff;color:#4B5A50;font-weight:700;font-size:13px">未読<span style="font-weight:700;font-size:11px;padding:1px 7px;border-radius:999px;background:#F1EEE4;color:#8A9187">5</span></span><span style="display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:999px;border:2px solid #E3E0D6;background:#fff;color:#4B5A50;font-weight:700;font-size:13px">読書中<span style="font-weight:700;font-size:11px;padding:1px 7px;border-radius:999px;background:#F1EEE4;color:#8A9187">2</span></span><span style="display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:999px;border:2px solid #E3E0D6;background:#fff;color:#4B5A50;font-weight:700;font-size:13px">読了<span style="font-weight:700;font-size:11px;padding:1px 7px;border-radius:999px;background:#F1EEE4;color:#8A9187">2</span></span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px"><div class="card" style="background:#fff;border:1px solid #EFEBDF;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(20,83,45,.05);display:flex;flex-direction:column;transition:all .18s ease">
+    <div style="background:#3FA79F;height:150px;position:relative;display:flex;align-items:center;justify-content:center;padding:16px">
+      <div style="position:absolute;top:0;left:16px;width:8px;height:100%;background:rgba(0,0,0,.14)"></div>
+      <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#fff;text-align:center;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,.25);padding-left:12px">銀河鉄道の夜</span>
+      <a href="#" class="del" title="削除" style="position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.28);color:#fff;font-size:14px;line-height:24px;text-align:center">×</a>
+    </div>
+    <div style="padding:14px 16px 16px">
+      <div style="font-size:12px;color:#8A9187;margin-bottom:9px">宮沢賢治</div>
+      <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#FEF2CE;color:#B45309;font-weight:700;font-size:12px;white-space:nowrap"><span style="width:7px;height:7px;border-radius:50%;background:#F5A623"></span>読書中</span>
+    </div>
+  </div><div class="card" style="background:#fff;border:1px solid #EFEBDF;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(20,83,45,.05);display:flex;flex-direction:column;transition:all .18s ease">
+    <div style="background:#E8674C;height:150px;position:relative;display:flex;align-items:center;justify-content:center;padding:16px">
+      <div style="position:absolute;top:0;left:16px;width:8px;height:100%;background:rgba(0,0,0,.14)"></div>
+      <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#fff;text-align:center;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,.25);padding-left:12px">人間失格</span>
+      <a href="#" class="del" title="削除" style="position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.28);color:#fff;font-size:14px;line-height:24px;text-align:center">×</a>
+    </div>
+    <div style="padding:14px 16px 16px">
+      <div style="font-size:12px;color:#8A9187;margin-bottom:9px">太宰治</div>
+      <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#FFEDE4;color:#C2410C;font-weight:700;font-size:12px;white-space:nowrap"><span style="width:7px;height:7px;border-radius:50%;background:#FB7A4B"></span>未読</span>
+    </div>
+  </div><div class="card" style="background:#fff;border:1px solid #EFEBDF;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(20,83,45,.05);display:flex;flex-direction:column;transition:all .18s ease">
+    <div style="background:#5B7DB1;height:150px;position:relative;display:flex;align-items:center;justify-content:center;padding:16px">
+      <div style="position:absolute;top:0;left:16px;width:8px;height:100%;background:rgba(0,0,0,.14)"></div>
+      <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#fff;text-align:center;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,.25);padding-left:12px">こころ</span>
+      <a href="#" class="del" title="削除" style="position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.28);color:#fff;font-size:14px;line-height:24px;text-align:center">×</a>
+    </div>
+    <div style="padding:14px 16px 16px">
+      <div style="font-size:12px;color:#8A9187;margin-bottom:9px">夏目漱石</div>
+      <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#DBF3E3;color:#15803D;font-weight:700;font-size:12px;white-space:nowrap"><span style="width:7px;height:7px;border-radius:50%;background:#22A366"></span>読了</span>
+    </div>
+  </div><div class="card" style="background:#fff;border:1px solid #EFEBDF;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(20,83,45,.05);display:flex;flex-direction:column;transition:all .18s ease">
+    <div style="background:#5AAE63;height:150px;position:relative;display:flex;align-items:center;justify-content:center;padding:16px">
+      <div style="position:absolute;top:0;left:16px;width:8px;height:100%;background:rgba(0,0,0,.14)"></div>
+      <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#fff;text-align:center;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,.25);padding-left:12px">ノルウェイの森</span>
+      <a href="#" class="del" title="削除" style="position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.28);color:#fff;font-size:14px;line-height:24px;text-align:center">×</a>
+    </div>
+    <div style="padding:14px 16px 16px">
+      <div style="font-size:12px;color:#8A9187;margin-bottom:9px">村上春樹</div>
+      <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#FFEDE4;color:#C2410C;font-weight:700;font-size:12px;white-space:nowrap"><span style="width:7px;height:7px;border-radius:50%;background:#FB7A4B"></span>未読</span>
+    </div>
+  </div><div class="card" style="background:#fff;border:1px solid #EFEBDF;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(20,83,45,.05);display:flex;flex-direction:column;transition:all .18s ease">
+    <div style="background:#F2A93B;height:150px;position:relative;display:flex;align-items:center;justify-content:center;padding:16px">
+      <div style="position:absolute;top:0;left:16px;width:8px;height:100%;background:rgba(0,0,0,.14)"></div>
+      <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#fff;text-align:center;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,.25);padding-left:12px">変身</span>
+      <a href="#" class="del" title="削除" style="position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.28);color:#fff;font-size:14px;line-height:24px;text-align:center">×</a>
+    </div>
+    <div style="padding:14px 16px 16px">
+      <div style="font-size:12px;color:#8A9187;margin-bottom:9px">カフカ</div>
+      <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#FFEDE4;color:#C2410C;font-weight:700;font-size:12px;white-space:nowrap"><span style="width:7px;height:7px;border-radius:50%;background:#FB7A4B"></span>未読</span>
+    </div>
+  </div><div class="card" style="background:#fff;border:1px solid #EFEBDF;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(20,83,45,.05);display:flex;flex-direction:column;transition:all .18s ease">
+    <div style="background:#E86A92;height:150px;position:relative;display:flex;align-items:center;justify-content:center;padding:16px">
+      <div style="position:absolute;top:0;left:16px;width:8px;height:100%;background:rgba(0,0,0,.14)"></div>
+      <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#fff;text-align:center;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,.25);padding-left:12px">星の王子さま</span>
+      <a href="#" class="del" title="削除" style="position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.28);color:#fff;font-size:14px;line-height:24px;text-align:center">×</a>
+    </div>
+    <div style="padding:14px 16px 16px">
+      <div style="font-size:12px;color:#8A9187;margin-bottom:9px">サン=テグジュペリ</div>
+      <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#FEF2CE;color:#B45309;font-weight:700;font-size:12px;white-space:nowrap"><span style="width:7px;height:7px;border-radius:50%;background:#F5A623"></span>読書中</span>
+    </div>
+  </div><div class="card" style="background:#fff;border:1px solid #EFEBDF;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(20,83,45,.05);display:flex;flex-direction:column;transition:all .18s ease">
+    <div style="background:#B56BAF;height:150px;position:relative;display:flex;align-items:center;justify-content:center;padding:16px">
+      <div style="position:absolute;top:0;left:16px;width:8px;height:100%;background:rgba(0,0,0,.14)"></div>
+      <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#fff;text-align:center;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,.25);padding-left:12px">罪と罰</span>
+      <a href="#" class="del" title="削除" style="position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.28);color:#fff;font-size:14px;line-height:24px;text-align:center">×</a>
+    </div>
+    <div style="padding:14px 16px 16px">
+      <div style="font-size:12px;color:#8A9187;margin-bottom:9px">ドストエフスキー</div>
+      <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#FFEDE4;color:#C2410C;font-weight:700;font-size:12px;white-space:nowrap"><span style="width:7px;height:7px;border-radius:50%;background:#FB7A4B"></span>未読</span>
+    </div>
+  </div><div class="card" style="background:#fff;border:1px solid #EFEBDF;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(20,83,45,.05);display:flex;flex-direction:column;transition:all .18s ease">
+    <div style="background:#4C9A8E;height:150px;position:relative;display:flex;align-items:center;justify-content:center;padding:16px">
+      <div style="position:absolute;top:0;left:16px;width:8px;height:100%;background:rgba(0,0,0,.14)"></div>
+      <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#fff;text-align:center;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,.25);padding-left:12px">老人と海</span>
+      <a href="#" class="del" title="削除" style="position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.28);color:#fff;font-size:14px;line-height:24px;text-align:center">×</a>
+    </div>
+    <div style="padding:14px 16px 16px">
+      <div style="font-size:12px;color:#8A9187;margin-bottom:9px">ヘミングウェイ</div>
+      <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#DBF3E3;color:#15803D;font-weight:700;font-size:12px;white-space:nowrap"><span style="width:7px;height:7px;border-radius:50%;background:#22A366"></span>読了</span>
+    </div>
+  </div><div class="card" style="background:#fff;border:1px solid #EFEBDF;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(20,83,45,.05);display:flex;flex-direction:column;transition:all .18s ease">
+    <div style="background:#D98A3D;height:150px;position:relative;display:flex;align-items:center;justify-content:center;padding:16px">
+      <div style="position:absolute;top:0;left:16px;width:8px;height:100%;background:rgba(0,0,0,.14)"></div>
+      <span style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#fff;text-align:center;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,.25);padding-left:12px">走れメロス</span>
+      <a href="#" class="del" title="削除" style="position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.28);color:#fff;font-size:14px;line-height:24px;text-align:center">×</a>
+    </div>
+    <div style="padding:14px 16px 16px">
+      <div style="font-size:12px;color:#8A9187;margin-bottom:9px">太宰治</div>
+      <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#FFEDE4;color:#C2410C;font-weight:700;font-size:12px;white-space:nowrap"><span style="width:7px;height:7px;border-radius:50%;background:#FB7A4B"></span>未読</span>
+    </div>
+  </div></div>
+</div></body></html>
